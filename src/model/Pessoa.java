@@ -1,6 +1,7 @@
 package model;
+import java.io.Serializable;
 
-public class Pessoa {
+public class Pessoa implements Serializable {
     //Campos
     private int id;
     private String nome;
