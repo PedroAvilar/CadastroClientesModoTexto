@@ -45,7 +45,7 @@ public class PessoaFisicaRepo {
     public void persistir(String arquivo) throws IOException {
         try (ObjectOutputStream arquivoSaida = new ObjectOutputStream(new FileOutputStream(arquivo))) {
             arquivoSaida.writeObject(pessoasFisicas);
-            System.out.println("Dados de Pessoa Física Armazenados.");
+            System.out.println("Dados de Pessoa Fisica Armazenados.");
         }
     }
     
@@ -53,7 +53,7 @@ public class PessoaFisicaRepo {
     public void recuperar(String arquivo) throws IOException, ClassNotFoundException {
         try (ObjectInputStream arquivoEntrada = new ObjectInputStream(new FileInputStream(arquivo))) {
             pessoasFisicas = (ArrayList<PessoaFisica>) arquivoEntrada.readObject();
-            System.out.println("Dados de Pessoa Física Recuperados.");
+            System.out.println("Dados de Pessoa Fisica Recuperados.");
         }
     }
 }
